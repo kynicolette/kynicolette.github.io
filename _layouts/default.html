@@ -1,29 +1,29 @@
 <!DOCTYPE html>
-	<html>
-		<head>
-			<title>{{ page.title }}</title>
-			<!-- link to main stylesheet -->
-			<link rel="stylesheet" type="text/css" href="/css/main.css">
-		</head>
-		<body>
-			<nav>
-	    		<ul>
-	        		<li><a href="/">Home</a></li>
-		        	<li><a href="/about">About</a></li>
-	        		<li><a href="/cv">CV</a></li>
-	        		<li><a href="/blog">Blog</a></li>
-	    		</ul>
-			</nav>
-			<div class="container">
-			
-			{{ content }}
-			
-			</div><!-- /.container -->
-			<footer>
-	    		<ul>
-	        		<li><a href="mailto:kynicolette@gmail.com">email</a></li>
-	        		<li><a href="https://github.com/kynicolette">github.com/kynicolette</a></li>
-				</ul>
-			</footer>
-		</body>
-	</html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>{{ page.title }}</title>
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="alternate" type="application/rss+xml" title="{{ site.name }}" href="/rss.xml" />
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/css/journal.css">
+
+    </head>
+    <body>
+
+        <div class="content container">
+
+          <h1 class="site-title"><a href="/">{{ site.name }}</a></h1>
+
+          {{ content }}
+
+          {% include footer.html %}
+
+
+        </div>
+
+    </body>
+</html>
